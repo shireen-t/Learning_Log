@@ -1,0 +1,29 @@
+{% extends "learning_logs/base.html" %}
+
+{% block header %}
+    <div class="jumbotron bg-primary text-white">
+        <div class="container">
+            <h1 class="display-4">Track your learning.</h1>
+            <p class="lead">Keep organized notes on what you're learning.</p>
+        </div>
+    </div>
+{% endblock header %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="alert alert-info">
+                    <h2 class="mb-4">Register an account</h2>
+                    <p class="mb-4">Start your own Learning Log and track your progress.</p><br>
+                    <a href="{% url 'users:register' %}" class="btn btn-primary">Register Now</a>
+                </div>
+
+                <div class="alert alert-warning">
+                    <h2 class="mb-4">Start making entries</h2>
+                    <p>Whenever you learn something new about a topic, make an entry summarizing what you've learned.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
