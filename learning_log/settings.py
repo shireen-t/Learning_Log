@@ -15,7 +15,11 @@ from pathlib import Path
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+import os
+from pathlib import Path
+
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -77,11 +81,15 @@ WSGI_APPLICATION = 'learning_log.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+import os
+import dj_database_url
+
 DATABASES = {
     'default': dj_database_url.config(
-        default='sqlite:///' + BASE_DIR / 'db.sqlite3'
+        default=os.environ.get('DATABASE_URL')
     )
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
