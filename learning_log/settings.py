@@ -1,3 +1,11 @@
+import os
+from pathlib import Path
+
+# Django settings...
+
+# Heroku settings...
+
+
 """
 Django settings for learning_log project.
 
@@ -136,7 +144,7 @@ LOGIN_URL = '/users/login/'
 BOOTSTRAP3 = {
     'include_jquery': True,
     }
-
+import os
 # Heroku settings
 if os.getcwd() == '/app':
     import dj_database_url
